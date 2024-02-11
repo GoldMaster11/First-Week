@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float _fallVelocity = 1;
+    public float gravity = 9.8f;
+
+    private float _fallVelocity = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,6 +16,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        _fallVelocity += gravity * Time.deltaTime;
        GetComponent<CharacterController>().Move(Vector3.down *  _fallVelocity * Time.deltaTime);  
     }
 }
