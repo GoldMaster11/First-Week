@@ -203,6 +203,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gravity: 9.8
+  jumpForce: 14
+  speed: 6
 --- !u!1 &198896260
 GameObject:
   m_ObjectHideFlags: 0
