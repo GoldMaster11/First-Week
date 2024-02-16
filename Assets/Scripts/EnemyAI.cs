@@ -26,8 +26,15 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        var direction = player.transform.position - transform.position;
+        NoticePlayerUpdate();
+        ChaseUpdate();
+        PatrolUpdate();
+    }
+    private void NoticePlayerUpdate()
+    {
 
+        var direction = player.transform.position - transform.position;
+        _isPlayerNoticed = false;
         if (Vector3.Angle(transform.forward, direction) < viewAngle)
         {
             RaycastHit hit;
@@ -37,37 +44,29 @@ public class EnemyAI : MonoBehaviour
                 {
                     _isPlayerNoticed = true;
                 }
-                else
-                {
-                    _isPlayerNoticed = false;
-                }
-            }
-            else
-            {
-                _isPlayerNoticed = false;
             }
         }
-        else
-        {
-            _isPlayerNoticed = false;    
-        }
 
-        
-
-        PatrolUpdate();
     }
-
     private void PatrolUpdate()
     {
-        if (_navMeshAgent.remainingDistance == 0)
+        if (!_isPlayerNoticed)
         {
-            PickNewPatrolPoint();
+            if (_navMeshAgent.remainingDistance == 0)
+            {
+                PickNewPatrolPoint();
+            }
         }
-
     }
-
     private void PickNewPatrolPoint()
     {
         _navMeshAgent.destination = patrolPoints[Random.Range(0, patrolPoints.Count)].position;
+    }
+    private void ChaseUpdate()
+    {
+        if (_isPlayerNoticed)
+        {
+            _navMeshAgent.destination = player.transform.position;
+        }
     }
 }
