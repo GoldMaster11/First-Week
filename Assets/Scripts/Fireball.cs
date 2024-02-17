@@ -5,6 +5,7 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public float speed;
+    public float lifetime;
 
     void FixedUpdate()
     {
@@ -14,5 +15,21 @@ public class Fireball : MonoBehaviour
     private void MoveFixedUpdate()
     {
         transform.position += transform.forward * speed * Time.fixedDeltaTime;
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        DestroyFireball();
+    }
+
+    private void DestroyFireball()
+    {
+        Destroy(gameObject);
+    }
+
+    private void Start()
+    {
+        Invoke("MethodName", 3);
+        Invoke("DestroyFireball", lifetime);
     }
 }
