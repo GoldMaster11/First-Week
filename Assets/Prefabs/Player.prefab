@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212856688390986748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.949, y: 1.7298, z: -0.045}
+  m_LocalPosition: {x: 0.972, y: 1.952, z: -0.077}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4083162032173072520}
@@ -523,6 +523,25 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!95 &6666263275900688233
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777156615181569775}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8e7bda5c2b7c66449853f3062599fa23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4083162032173072526
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +613,7 @@ MonoBehaviour:
   gravity: 10.8
   jumpForce: 9
   speed: 6
+  animator: {fileID: 6666263275900688233}
 --- !u!143 &4083162032173072521
 CharacterController:
   m_ObjectHideFlags: 0
@@ -609,7 +629,7 @@ CharacterController:
   m_Radius: 0.22
   m_SlopeLimit: 45
   m_StepOffset: 0.3
-  m_SkinWidth: 0.08
+  m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1.03, z: 0}
 --- !u!114 &9114318774659575289
@@ -643,6 +663,7 @@ MonoBehaviour:
   valueRectTransform: {fileID: 7909056006859014070}
   gameplayUI: {fileID: 813956916560815543}
   gameOverScreen: {fileID: 6054558354478455458}
+  animator: {fileID: 6666263275900688233}
 --- !u!1 &4083162032415653773
 GameObject:
   m_ObjectHideFlags: 0
@@ -940,7 +961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.76862746}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.6745098}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1182,6 +1203,12 @@ PrefabInstance:
 --- !u!4 &4548907484308984917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d08b4e58ee6dee043a0388e347e5dbe0,
+    type: 3}
+  m_PrefabInstance: {fileID: 4083162031784932286}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3777156615181569775 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: d08b4e58ee6dee043a0388e347e5dbe0,
     type: 3}
   m_PrefabInstance: {fileID: 4083162031784932286}
   m_PrefabAsset: {fileID: 0}
