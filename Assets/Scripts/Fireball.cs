@@ -40,7 +40,6 @@ public class Fireball : MonoBehaviour
 
     private void Start()
     {
-        Invoke("MethodName", 3);
         Invoke("DestroyFireball", lifetime);
     }
 }
