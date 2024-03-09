@@ -595,7 +595,7 @@ MonoBehaviour:
   - {fileID: 1429208481}
   player: {fileID: 1679714193}
   viewAngle: 90
-  damage: 30
+  damage: 25
   attackDistance: 1
   animator: {fileID: 1813321342}
 --- !u!195 &652942820
