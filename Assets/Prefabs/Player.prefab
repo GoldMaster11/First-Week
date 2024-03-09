@@ -862,6 +862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6608782581353418164}
   - component: {fileID: 8429127028144159635}
+  - component: {fileID: 8240818874664165446}
   m_Layer: 5
   m_Name: Game Over Screen
   m_TagString: Untagged
@@ -903,6 +904,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf41a91e7a9a8c4bbf68edd747a5a0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &8240818874664165446
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6054558354478455458}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 749de0361a6a1f04f957b190f3927c3b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6067733868592767935
 GameObject:
   m_ObjectHideFlags: 0
