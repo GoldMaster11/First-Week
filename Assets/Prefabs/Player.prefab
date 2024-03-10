@@ -25,9 +25,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 212856688390986748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.972, y: 1.952, z: -0.077}
+  m_LocalPosition: {x: 0.799, y: 1.802, z: -0.182}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 6355282659432460875}
   m_Father: {fileID: 4083162032173072520}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -556,6 +557,7 @@ GameObject:
   - component: {fileID: 4083162032173072521}
   - component: {fileID: 9114318774659575289}
   - component: {fileID: 4649364767661526790}
+  - component: {fileID: 5989655153145677130}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -664,6 +666,22 @@ MonoBehaviour:
   gameplayUI: {fileID: 813956916560815543}
   gameOverScreen: {fileID: 6054558354478455458}
   animator: {fileID: 6666263275900688233}
+--- !u!114 &5989655153145677130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4083162032173072526}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 382fa8c68a84cd04e9d5802a1c247ef0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grenadePrefab: {fileID: -4663013215130497017, guid: 5e287f359423fc5478a3ed90107f5603,
+    type: 3}
+  grenadeSourceTransform: {fileID: 6355282659432460875}
+  force: 500
 --- !u!1 &4083162032415653773
 GameObject:
   m_ObjectHideFlags: 0
@@ -778,6 +796,36 @@ Transform:
   m_Father: {fileID: 4083162032173072520}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: -0.13700001, y: 0, z: 0}
+--- !u!1 &4150685335448945795
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6355282659432460875}
+  m_Layer: 0
+  m_Name: Grenade Source
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6355282659432460875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4150685335448945795}
+  m_LocalRotation: {x: -0.258819, y: 0, z: 0, w: 0.9659259}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3187185072580313605}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
 --- !u!1 &5432856360381498323
 GameObject:
   m_ObjectHideFlags: 0
