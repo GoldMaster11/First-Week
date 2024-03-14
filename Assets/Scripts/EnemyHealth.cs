@@ -7,8 +7,12 @@ public class EnemyHealth : MonoBehaviour
     public float value = 100;
     public Animator animator;
 
+    public PlayerProgress playerProgress;
+
     public void DealDamage(float damage)
     {
+        playerProgress.AddExperience(damage);
+        
         value -= damage;
         if (value <= 0)
         {
