@@ -7,7 +7,7 @@ public class EnemyAI : MonoBehaviour
     public List<Transform> patrolPoints;
     public PlayerController player;
     public float viewAngle;
-    public float damage = 30;
+    public float damage = 25;
     public float attackDistance = 1;
     public Animator animator;
 
