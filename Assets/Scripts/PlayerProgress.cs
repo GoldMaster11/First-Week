@@ -5,6 +5,8 @@ using TMPro;
 
 public class PlayerProgress : MonoBehaviour
 {
+    public List<PlayerProgressLevel> levels;
+
     public RectTransform experienceValueRectTransform;
     public TextMeshProUGUI levelValueTMP;
 
@@ -18,10 +20,17 @@ public class PlayerProgress : MonoBehaviour
         _experienceCurrentValue += value;
         if(_experienceCurrentValue >= _experienceTargetValue)
         {
-            _levelValue += 1;
+            SetLevel(_levelValue + 1);
             _experienceCurrentValue = 0;
         }
         DrawUI();
+    }
+
+    private void SetLevel(int value)
+    {
+        _levelValue = value;
+
+        _experienceTargetValue = levels[_levelValue - 1].experienceForTheNextLevel;
     }
 
     private void DrawUI()
@@ -32,6 +41,7 @@ public class PlayerProgress : MonoBehaviour
 
     private void Start()
     {
+        SetLevel(_levelValue);
         DrawUI();
     }
 }
